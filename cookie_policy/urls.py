@@ -1,8 +1,9 @@
-from django.conf.urls import url
+from django.conf.urls import re_path
 
 from . import views
 
+app_name = 'cookie_policy'
 urlpatterns = [
-    url(r'^policy/?', views.policy_view, name='cookiePolicy'),
-    url(r'^accept-cookie-policy/?', views.acceptCookiePolicy_view, name='acceptCookiePolicy'),
+    re_path(r'^policy/?', views.policy_view, name='cookie_policy'),
+    re_path(r'^accept-cookie-policy/?', views.accept_cookie_policy, name='accept_cookie_policy'),
 ]
